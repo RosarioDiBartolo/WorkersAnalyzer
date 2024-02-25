@@ -1,0 +1,17 @@
+setup.py
+WorkerAnalyzer.egg-info/PKG-INFO
+WorkerAnalyzer.egg-info/SOURCES.txt
+WorkerAnalyzer.egg-info/dependency_links.txt
+WorkerAnalyzer.egg-info/requires.txt
+WorkerAnalyzer.egg-info/top_level.txt
+WorkersAnalyzer/Core.py
+WorkersAnalyzer/Info.py
+WorkersAnalyzer/Test.py
+WorkersAnalyzer/__init__.py
+WorkersAnalyzer/main.py
+WorkersAnalyzer/year_extraction.py
+WorkersAnalyzer/Extractors/CannizzaroExtractor.py
+WorkersAnalyzer/Extractors/OCRExtractor.py
+WorkersAnalyzer/Extractors/PisaExtractor.py
+WorkersAnalyzer/Extractors/PoliclinicoExtractor.py
+WorkersAnalyzer/Extractors/__init__.py
