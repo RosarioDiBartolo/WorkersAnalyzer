@@ -14,7 +14,7 @@ class PDFBlock:
 
         if len(names) > 1:
             print(names)
-            raise Exception("Qualcosas è andato storto... il nome riscotrato nei pdf non sembra essere coerente")
+            raise Exception("Qualcosa è andato storto... il nome riscontrato nei pdf non sembra essere coerente")
         return data, names.pop()
 def analyze(row: str):
     values = row.replace("*", ' ').split()

@@ -1,0 +1,1 @@
+from WorkersAnalyzer import main
