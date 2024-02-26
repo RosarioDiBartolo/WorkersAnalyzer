@@ -5,23 +5,17 @@ from ..Core import maputil, turno, PDFBlock
 
 
 class OCRExtractor:
-    def __init__(self, pages  ):
-
-        self.pages = pages
-
+    def __init__(self ,  ):
+        pass
     #list of pandas Dataframes for different Pages of the same PDF
-    def features(self, sample =  False):
-        pages = self.pages[0: 5 ] if sample else self.pages
-        data = maputil(lambda page: self.parse_from_corpus( page.extract_text() ), pages)
-
+    def features(self, block ):
+        data = maputil( self.parse_from_corpus, block)
         return data
 
     
-    def extract_from_text_corpus(self, corpus):
-        # Return a pandas dataframe with the required columns: "Entrata" + some optional/additional columns: "Orario" "Giorno" "Giorno della settimana"
 
-        pass
     def parse_from_corpus(self, corpus ):
+
         data , name =  self.extract_from_text_corpus(corpus)
         if "orario" not in data.columns:
             data = data.dropna( subset = ['entrata'] )
@@ -34,6 +28,10 @@ class OCRExtractor:
         data["turno"] = data["entrata"].apply(turno)
 
         return data, name
+
+    def extract_from_text_corpus(self, corpus):
+        # Return a pandas dataframe with the required columns: "Entrata" + some optional/additional columns: "Orario" "Giorno" "Giorno della settimana"
+        pass
 
     @staticmethod
     def isEntry(word):

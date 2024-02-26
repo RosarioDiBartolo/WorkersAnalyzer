@@ -2,11 +2,11 @@ import os
 
 from WorkersAnalyzer.Core import maputil,  PDFBlock
 from WorkersAnalyzer.Extractors.PisaExtractor import PisaExtractor
+from WorkersAnalyzer.Extractors.OCRExtractor import OCRExtractor
 import pandas as pd
 
-def main(block, extractor, test=False):
-    analyzer = extractor(block.pages)
-    Pages_Data = analyzer.features(test)
+def main(block: PDFBlock, extractor: OCRExtractor ):
+    Pages_Data = extractor.features( block.exytract_text() )
     Pages_Data , name = block.verify(Pages_Data)
     values = pd.concat(Pages_Data)["turno"].value_counts()
     return Pages_Data, values, name
@@ -29,8 +29,8 @@ if __name__ == '__main__':
         try:
             print("\nAnalizzando dati per il file:", base, "...")
             block = PDFBlock.from_file(file)
-
-            Pages_Data, values, name = main(  block, PisaExtractor )
+            extractor = PisaExtractor()
+            Pages_Data, values, name = main(  block, extractor   )
             print(values)
 
             output = f"./out/{base}.txt"

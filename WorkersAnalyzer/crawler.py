@@ -1,11 +1,18 @@
 import os
+import time
+
 import requests
 import bs4
-base = 'https://sportellodipendenti.policlinico.unict.it/gp4web'
 
+
+
+base = 'https://sportellodipendenti.policlinico.unict.it/gp4web'
+mese = "DICEMBRE"
+anno = "2024"
+mail = 'silvana.mangione@policlinico.unict.it'
 dashboard_suf = '/common/Main.do'
 login_suf = '/restrict/index.do?MVTD=Login'
-login =  base  + login_suf
+login_url =  base  + login_suf
 dashboard =  base + dashboard_suf
 
 headers = {
@@ -24,23 +31,19 @@ headers = {
     'sec-ch-ua-platform': '"Windows"',
 }
 
-def log_in(username, password):
+def login(username, password):
     with requests.session() as session:
-
         #set browser headers
         session.headers.update( headers)
-
         #The requests must follow this exact order
         session.get(dashboard)
 
-
         #The requests must follow this exact order
-        response = session.get(
-            login
-         )
+        session.get(
+            login_url
+        )
 
-        oldJSESSIONID = session.cookies.get_dict('JSESSIONID')
-
+        old = session.cookies.get("JSESSIONID")
 
         data = {
             'j_username': username,
@@ -55,18 +58,56 @@ def log_in(username, password):
             data = data,
         )
 
+        new = session.cookies.get("JSESSIONID")
 
-        if session.cookies.get('JSESSIONID') == oldJSESSIONID:
-            print("Login failed")
-        else:
-            print("Login was succesfull")
+
+
+        if old == new:
+            raise Exception(f"Login was not successfull... {username} and {password}")
+
 
         home = session.get(dashboard)
 
-        s = bs4.BeautifulSoup(home.text, 'html.parser')
-        print(s.select("tr.AFCHeaderTR > td:nth-child(3) font") )
-        print( session.cookies)
+        soup = bs4.BeautifulSoup(home.text, "html.parser")
 
+        user = soup.select_one(".AFCHeaderWelcome b").text.split()[0]
+        print(user, username)
+        if username != user:
+            raise Exception(f"Login failed...")
     return session
 
-log_in("30105", "cesti")
+def crawl(session, anno, mese, username):
+    anno = str(anno)
+
+    conferma = session.post(    'https://sportellodipendenti.policlinico.unict.it/gp4web/ss/CedolinoRichiestaConferma.do?ccsForm=Appoggio:Edit',data = {
+        'anno': anno,
+        'par': mese[:3],
+        'ci': '30105',
+        'CODICE_MENSILITA': mese[:3],
+        'INVIO_TELEMATICO': '1',
+        'E_MAIL': mail,
+        'Button_Update': 'Conferma Richiesta',
+    }
+     )
+
+
+    for i in range(3):
+        cedolini = session.get("https://sportellodipendenti.policlinico.unict.it/gp4web/ss/CedolinoRichiesta.do?")
+        s = bs4.BeautifulSoup(cedolini.text, "html.parser")
+        interested_link = s.select("a.AFCLink")[1]
+        words = interested_link.get('title').split()
+        month = words[1]
+        year = words[3]
+        if mese == month and year == anno:
+            print("Cedolino Richiesta trovato")
+            return session.post("https://sportellodipendenti.policlinico.unict.it/gp4web/ss/UploadDownload",
+                                data={"dataSource": "jdbc/gp4web", "functionName": "verify_ci",
+                                      "p1": "\'CEDOLINO_RICHIESTO\'", "p2": username})
+
+        time.sleep(10)
+
+    raise Exception(f"Nessun file trovati per il seguente anno e mese: {anno}-{mese}           {words}")
+
+
+
+

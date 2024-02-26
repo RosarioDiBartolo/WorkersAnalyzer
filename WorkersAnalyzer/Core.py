@@ -5,6 +5,9 @@ class PDFBlock:
 
     def __init__(self, pages):
         self.pages = pages
+
+    def exytract_text(self):
+        return maputil(lambda page:page.extract_text() , self.pages)
     @staticmethod
     def from_file(filename):
         return PDFBlock( PyPDF2.PdfReader(filename).pages  )
