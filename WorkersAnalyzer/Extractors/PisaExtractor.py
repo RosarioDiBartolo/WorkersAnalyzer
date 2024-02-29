@@ -8,11 +8,11 @@ class PisaExtractor(OCRExtractor):
     columns = ['Giorno', 'Timbrature', 'Assenze', 'Anomalie/P.O.', 'Timbr.', 'Dovuto', 'Totale', 'Saldo', 'Turno', 'Ore Repe', 'Repe Eff']
 
     def handle_data_row(self, row):
-
         words = row.split()
+        words = [word for word in words if word != '1']
+
         if len(words) >= 9:
             return
-
         possible_orario =  words[0][:6]
         return OCRExtractor.isEntry (  possible_orario   )
 
