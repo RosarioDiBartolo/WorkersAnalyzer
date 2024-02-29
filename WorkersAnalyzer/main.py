@@ -6,8 +6,9 @@ from WorkersAnalyzer.Extractors.OCRExtractor import OCRExtractor
 import pandas as pd
 
 def main(block: PDFBlock, extractor: OCRExtractor ):
-    Pages_Data = extractor.features( block.exytract_text() )
-    Pages_Data , name = block.verify(Pages_Data)
+    Pages_Data = extractor.features( block.extract_text() )
+
+    Pages_Data , name = PDFBlock(Pages_Data).verify()
     values = pd.concat(Pages_Data)["turno"].value_counts()
     return Pages_Data, values, name
 
@@ -15,14 +16,12 @@ def main(block: PDFBlock, extractor: OCRExtractor ):
 if __name__ == '__main__':
     from tkinter import filedialog
 
-    files = filedialog.askopenfilenames(initialdir = "/",
-                                          title = "Select a File",
-                                          filetypes = (("pdf files",
-                                                        "*.pdf*"),
-                                                       ))
+    files = filedialog.askopenfilenames(
+        initialdir = "/",
+        title = "Select a File",
+        filetypes = (("pdf files","*.pdf*"),))
 
 
-    print(files)
     base_names = maputil(lambda f: os.path.basename(f).split(".")[0], files)
     # Call the main function with the specified input and output filenames
     for file, base in zip(files, base_names):
@@ -42,6 +41,6 @@ if __name__ == '__main__':
             with open( output, "w") as out:
                 print( name,  values.to_string(),sep='\n' , file=out)
         except Exception as e:
-            print(f"Qualcosa è andato storto nella gestione del file '{base}':", e.with_traceback(), sep="\n")
+            print(f"Qualcosa è andato storto nella gestione del file '{base}':", e, sep="\n")
 
     input("Analisi completata con successo. Premi qualsiasi pulsante per chiudere il progamma\n")

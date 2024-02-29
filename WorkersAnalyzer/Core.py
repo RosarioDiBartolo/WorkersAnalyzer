@@ -1,19 +1,47 @@
+import os
+from tkinter import filedialog
+
 import PyPDF2
 
+class Directory:
 
+    @staticmethod
+    def return_dir(method):
+        def wrapper(*args, **kwargs):
+            directory = method(*args, **kwargs)
+            return Directory(directory)
+        return wrapper
+
+
+
+    def __init__(self, dir):
+        self.directory = dir
+
+    @return_dir
+    def path(self, *paths):
+        return os.path.join(self.directory, *paths)
+    @staticmethod
+    def from_explorer():
+        dir = filedialog.askdirectory(initialdir="./",
+                                            title="Select a Directory",)
+        return Directory(dir)
 class PDFBlock:
 
     def __init__(self, pages):
         self.pages = pages
 
-    def exytract_text(self):
+    def extract_text(self):
         return maputil(lambda page:page.extract_text() , self.pages)
     @staticmethod
     def from_file(filename):
         return PDFBlock( PyPDF2.PdfReader(filename).pages  )
-    def verify(self, pages):
-        data = [d[0] for d in pages  ]
-        names = set(d[1] for d in pages )
+    def from_files(self, *files):
+        pages = [page  for filename in files for page in  PyPDF2.PdfReader(filename).pages  ]
+        return PDFBlock(pages)
+
+    def verify(self):
+        data = [d[0] for d in self.pages  ]
+        names = set(d[1] for d in self.pages )
 
         if len(names) > 1:
             print(names)
@@ -60,5 +88,3 @@ class ScannedExtractor:
 
 
 mesi = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobbre", "Novembre", "Dicembre"]
-
-

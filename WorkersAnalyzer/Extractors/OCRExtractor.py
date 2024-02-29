@@ -1,7 +1,6 @@
-import PyPDF2
-import pandas as pd
 
-from ..Core import maputil, turno, PDFBlock
+
+from ..Core import maputil, turno
 
 
 class OCRExtractor:
