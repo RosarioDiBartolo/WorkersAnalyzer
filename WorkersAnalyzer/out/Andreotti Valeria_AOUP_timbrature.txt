@@ -1,5 +1,0 @@
-ANDREOTTI VALERIA
-turno
-Mattina       358
-Notte         348
-Pomeriggio    323
