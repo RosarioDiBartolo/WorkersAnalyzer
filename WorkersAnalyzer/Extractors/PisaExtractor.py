@@ -5,7 +5,6 @@ from .OCRExtractor import OCRExtractor
 
 class PisaExtractor(OCRExtractor):
     w_days = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
-    columns = ['Giorno', 'Timbrature', 'Assenze', 'Anomalie/P.O.', 'Timbr.', 'Dovuto', 'Totale', 'Saldo', 'Turno', 'Ore Repe', 'Repe Eff']
 
     def handle_data_row(self, row):
         words = row.split()

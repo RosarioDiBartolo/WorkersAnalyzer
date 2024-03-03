@@ -43,4 +43,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"Qualcosa è andato storto nella gestione del file '{base}':", e, sep="\n")
 
-    input("Analisi completata con successo. Premi qualsiasi pulsante per chiudere il progamma\n")
+    input("Analisi completata. Premi qualsiasi pulsante per chiudere il progamma\n")

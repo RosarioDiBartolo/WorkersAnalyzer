@@ -25,6 +25,8 @@ class Directory:
         dir = filedialog.askdirectory(initialdir="./",
                                             title="Select a Directory",)
         return Directory(dir)
+
+
 class PDFBlock:
 
     def __init__(self, pages):
@@ -60,9 +62,9 @@ def analyze(row: str):
     return {"w-day": giorno_settimana, "day": giorno, "entrata": entry}
 
 orari_turni = {
-    700: "Mattina",
-    2000: "Notte",
-    1400: "Pomeriggio"
+    700: "Mattine",
+    2000: "Notti",
+    1400: "Pomeriggi"
 }
 orari = orari_turni.keys()
 def turno(orario_entrata_uscita):
