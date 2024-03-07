@@ -1,5 +1,6 @@
 import os
 import time
+from datetime import datetime
 
 import requests
 import bs4
@@ -30,6 +31,18 @@ headers = {
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
 }
+
+print(dashboard)
+
+
+today = datetime.now()
+today_year = today.year
+today_month = today.month
+
+
+def validDate(date: datetime) -> bool:
+    return date.year > today_year or date.month > today_month
+
 
 def login(username, password):
     with requests.session() as session:
@@ -78,11 +91,13 @@ def login(username, password):
 
 def crawl(session, anno, mese, username):
     anno = str(anno)
+    if not validDate(datetime(day=0, month=mese, year=anno ) ):
+        raise Exception(f"Invalid date...")
 
     conferma = session.post(    'https://sportellodipendenti.policlinico.unict.it/gp4web/ss/CedolinoRichiestaConferma.do?ccsForm=Appoggio:Edit',data = {
         'anno': anno,
         'par': mese[:3],
-        'ci': '30105',
+        'ci': username,
         'CODICE_MENSILITA': mese[:3],
         'INVIO_TELEMATICO': '1',
         'E_MAIL': mail,
@@ -110,4 +125,6 @@ def crawl(session, anno, mese, username):
 
 
 
-
+if __name__ == '__main__':
+    session = login("30105", "cespiti")
+    print(session)
