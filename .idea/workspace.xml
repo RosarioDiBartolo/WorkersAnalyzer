@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="Updating PisaExtractor and other functionalities">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save.bat" beforeDir="false" afterPath="$PROJECT_DIR$/save.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +294,7 @@
       <workItem from="1709741252565" duration="133000" />
       <workItem from="1709745458194" duration="641000" />
       <workItem from="1709818423990" duration="632000" />
-      <workItem from="1709828870297" duration="463000" />
+      <workItem from="1709828870297" duration="763000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />

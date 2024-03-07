@@ -1,4 +1,5 @@
 git add .
 git commit -m "Saving changes"
 git push
-/.venv/Scripts/python.exe setup.py sdist
+./venv/Scripts/activate
+python setup.py sdist
