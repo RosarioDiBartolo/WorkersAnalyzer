@@ -1,4 +1,3 @@
-import os
 import time
 from datetime import datetime
 
@@ -8,8 +7,7 @@ import bs4
 
 
 base = 'https://sportellodipendenti.policlinico.unict.it/gp4web'
-mese = "DICEMBRE"
-anno = "2024"
+
 mail = 'silvana.mangione@policlinico.unict.it'
 dashboard_suf = '/common/Main.do'
 login_suf = '/restrict/index.do?MVTD=Login'
@@ -39,9 +37,25 @@ today = datetime.now()
 today_year = today.year
 today_month = today.month
 
+month_mapping = {
+    "GENNAIO": 1,
+    "FEBBRAIO": 2,
+    "MARZO": 3,
+    "APRILE": 4,
+    "MAGGIO": 5,
+    "GIUGNO": 6,
+    "LUGLIO": 7,
+    "AGOSTO": 8,
+    "SETTEMBRE": 9,
+    "OTTOBRE": 10,
+    "NOVEMBRE": 11,
+    "DICEMBRE": 12
+}
 
-def validDate(date: datetime) -> bool:
-    return date.year > today_year or date.month > today_month
+mesi = list( month_mapping.keys() )
+
+def invalidDate(date: datetime) -> bool:
+    return date.year > today_year and date.month > today_month
 
 
 def login(username, password):
@@ -84,14 +98,12 @@ def login(username, password):
         soup = bs4.BeautifulSoup(home.text, "html.parser")
 
         user = soup.select_one(".AFCHeaderWelcome b").text.split()[0]
-        print(user, username)
         if username != user:
             raise Exception(f"Login failed...")
     return session
 
 def crawl(session, anno, mese, username):
-    anno = str(anno)
-    if not validDate(datetime(day=0, month=mese, year=anno ) ):
+    if invalidDate(datetime(day=1, month= month_mapping[mese]  , year=anno ) ):
         raise Exception(f"Invalid date...")
 
     conferma = session.post(    'https://sportellodipendenti.policlinico.unict.it/gp4web/ss/CedolinoRichiestaConferma.do?ccsForm=Appoggio:Edit',data = {
@@ -106,14 +118,17 @@ def crawl(session, anno, mese, username):
      )
 
 
-    for i in range(3):
+    for i in range(10):
         cedolini = session.get("https://sportellodipendenti.policlinico.unict.it/gp4web/ss/CedolinoRichiesta.do?")
         s = bs4.BeautifulSoup(cedolini.text, "html.parser")
         interested_link = s.select("a.AFCLink")[1]
         words = interested_link.get('title').split()
         month = words[1]
         year = words[3]
-        if mese == month and year == anno:
+
+        print("Available", month, year)
+        print("Required", mese, anno)
+        if mese == month and int(year)== int(anno):
             print("Cedolino Richiesta trovato")
             return session.post("https://sportellodipendenti.policlinico.unict.it/gp4web/ss/UploadDownload",
                                 data={"dataSource": "jdbc/gp4web", "functionName": "verify_ci",
@@ -127,4 +142,4 @@ def crawl(session, anno, mese, username):
 
 if __name__ == '__main__':
     session = login("30105", "cespiti")
-    print(session)
+    print(crawl(session, 2019, 1,"30105" ))
