@@ -1,0 +1,5 @@
+Turno,count
+Pomeriggio,72
+Notte,72
+Mattina,69
+225

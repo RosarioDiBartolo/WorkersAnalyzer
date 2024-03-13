@@ -1,0 +1,5 @@
+ARRIGHI MICHELE
+turno
+Pomeriggio    5
+Mattina       3
+Notte         3
