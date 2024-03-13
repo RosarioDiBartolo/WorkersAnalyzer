@@ -323,7 +323,7 @@
       <workItem from="1710098560843" duration="1663000" />
       <workItem from="1710222924654" duration="1811000" />
       <workItem from="1710254520429" duration="6964000" />
-      <workItem from="1710347062455" duration="950000" />
+      <workItem from="1710347062455" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />
@@ -493,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710347847987</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710348023282</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710348023282</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
