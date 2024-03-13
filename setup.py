@@ -39,7 +39,7 @@ urllib3==2.2.1
 
 setup(
     name=Nome,
-    version='0.1.0',
+    version='0.2.0',
     description=Descrizione,
     author='Rosario Di Bartolo',
     packages=find_packages(),  # Automatically discover and include all packages,

@@ -5,40 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="Updating PisaExtractor and other functionalities">
-      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/DataExtracted.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer.egg-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer.egg-info/top_level.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/WorkersAnalyzer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/pythonProject.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/shelf/Uncommitted_changes_before_Update_at_29_02_2024_18_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/shelf/Uncommitted_changes_before_Update_at_29_02_2024_18_24__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/BPC/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/BPC/crawler.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/BPC/scrape_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Dummy-Extractors/CannizzaroExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Dummy-Extractors/OCRExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Dummy-Extractors/PoliclinicoExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Dummy-Extractors/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/ExctractingError.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Info.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/PisaExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/PisaExtractorExample.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/Test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/UserExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/out/Andreotti Valeria_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/out/Arrighi Michele_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/out/Barsotti Michela_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/out/Cerrai Elisa_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzers/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +34,11 @@
       </branch-storage>
     </excluded-from-favorite>
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -81,65 +53,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.pytest for PisaExtractor.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for PisaExtractor.test_on_files.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for SingleUser.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in PisaExtractor.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in SingleUser.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest in Test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Analyze.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ArgumentHandler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Core (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.Core.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FileMerge.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FinalPisaExtraction.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Info.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.OCRExtractor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PDFREADER.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Packagetest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PageExtractor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PageExtractorTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PisaExtractor (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.PisaExtractor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PisaExtractorExample.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ReadPdfs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RowExtractor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.SingleUser.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TestYear.executor&quot;: &quot;Run&quot;,
-    &quot;Python.UserExtractor (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.UserExtractor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.WordForm.executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cli.executor&quot;: &quot;Run&quot;,
-    &quot;Python.crawler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.extract_pdf (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proxy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrape_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.year_extraction.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last.edited.regexp&quot;: &quot;U23&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Rosario/Desktop/WorkersAnalyzer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python tests.pytest for PisaExtractor.test.executor": "Run",
+    "Python tests.pytest for PisaExtractor.test_on_files.executor": "Run",
+    "Python tests.pytest for SingleUser.test.executor": "Run",
+    "Python tests.pytest in PisaExtractor.py.executor": "Run",
+    "Python tests.pytest in SingleUser.py.executor": "Run",
+    "Python tests.pytest in Test.py.executor": "Run",
+    "Python.Analyze.executor": "Run",
+    "Python.ArgumentHandler.executor": "Run",
+    "Python.Core (1).executor": "Run",
+    "Python.Core.executor": "Run",
+    "Python.FileMerge.executor": "Run",
+    "Python.FinalPisaExtraction.executor": "Run",
+    "Python.Info.executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.OCRExtractor.executor": "Run",
+    "Python.PDFREADER.executor": "Run",
+    "Python.Packagetest.executor": "Run",
+    "Python.PageExtractor.executor": "Run",
+    "Python.PageExtractorTest.executor": "Run",
+    "Python.PisaExtractor (1).executor": "Run",
+    "Python.PisaExtractor.executor": "Run",
+    "Python.PisaExtractorExample.executor": "Run",
+    "Python.ReadPdfs.executor": "Run",
+    "Python.RowExtractor.executor": "Run",
+    "Python.SingleUser.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.TestYear.executor": "Run",
+    "Python.UserExtractor (1).executor": "Run",
+    "Python.UserExtractor.executor": "Run",
+    "Python.WordForm.executor": "Run",
+    "Python.__init__ (1).executor": "Run",
+    "Python.__init__.executor": "Run",
+    "Python.cli.executor": "Run",
+    "Python.crawler.executor": "Run",
+    "Python.extract_pdf (1).executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main (2).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proxy.executor": "Run",
+    "Python.scrape_user.executor": "Run",
+    "Python.setup.executor": "Run",
+    "Python.year_extraction.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "2.0",
+    "last.edited.regexp": "U23",
+    "last_opened_file_path": "C:/Users/Rosario/Desktop/WorkersAnalyzer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Rosario\PycharmProjects\pythonProject" />
@@ -353,6 +325,7 @@
       <workItem from="1710098560843" duration="1663000" />
       <workItem from="1710222924654" duration="1811000" />
       <workItem from="1710254520429" duration="6964000" />
+      <workItem from="1710347062455" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />
@@ -498,7 +471,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710002937037</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710347242606</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347242606</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710347361980</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347361980</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
