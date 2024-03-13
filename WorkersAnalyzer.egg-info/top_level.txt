@@ -1,1 +1,1 @@
-WorkersAnalyzers
+WorkersAnalyzer

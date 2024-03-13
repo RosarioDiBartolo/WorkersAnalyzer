@@ -1,5 +1,0 @@
-CERRAI ELISA
-turno
-Mattine      285
-Notti        180
-Pomeriggi    115
