@@ -30,7 +30,6 @@ headers = {
     'sec-ch-ua-platform': '"Windows"',
 }
 
-print(dashboard)
 
 
 today = datetime.now()
