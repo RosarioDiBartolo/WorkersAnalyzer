@@ -126,8 +126,6 @@ def extract_from_file(file):
 
 
 
-
-
 if __name__ == '__main__':
     print("\nPAGE\n".join( [ '\n'.join(p) for p in PDFIterator("../PisaTests/Giannini Simone_AOUP_timbrature.pdf")]) )
 

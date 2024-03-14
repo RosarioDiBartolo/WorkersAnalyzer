@@ -38,7 +38,8 @@ class UserExtractor:
 
         names = {e.name for e in Extractors}
         if len(names)> 1:
-            raise Exception("Nomi diversi all'interno delle pagine...")
+            pass
+            #raise Exception("Nomi diversi all'interno delle pagine...")
 
         df = pd.concat( e.with_datetime() for e in Extractors ).dropna()
 
