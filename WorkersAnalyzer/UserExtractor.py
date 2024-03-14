@@ -16,7 +16,7 @@ class UserExtractor:
         self.data, self.name  = UserExtractor.extract_from_extractors(Extractors)
 
     def elaborate(extractor):
-        Elaboration = (extractor.data["entrata"].apply(lambda row: row["Data"])).apply(
+        Elaboration = extractor.data["Data"].apply(
             lambda Data: (Data.year, turno(Data.time())))
         Elaboration = pd.DataFrame(list(Elaboration), columns=["Anno", "Turno"])
 
