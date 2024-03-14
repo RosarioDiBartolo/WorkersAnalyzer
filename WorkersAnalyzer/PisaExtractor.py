@@ -106,26 +106,3 @@ class PisaExtractor:
         return data, name, mesi.index(mese.lower()) + 1, int(anno)
 
 
-def nTtest(filename):
-    with open(filename , "r") as f:
-        pages = f.read().split("\nPAGES\n")
-
-
-    Extractor = PisaExtractor(  pages[0].splitlines() )
-
-    print(Extractor.data)
-
-def extract_from_file(file):
-    pages = PDFIterator(file)
-
-    data = pd.concat([PisaExtractor(page).with_datetime() for page in pages])
-    data["Turni"] = data.apply(lambda r: turno(r["Data"]) if r["Tipo"] == "E" else None, axis=1)
-    data.to_csv(f"{os.path.basename(file).split(".")[0]}.csv")
-
-
-
-
-
-if __name__ == '__main__':
-    print("\nPAGE\n".join( [ '\n'.join(p) for p in PDFIterator("../PisaTests/Giannini Simone_AOUP_timbrature.pdf")]) )
-
