@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from .crawler import login, crawl, mesi
+from WorkersAnalyzer.BPC.crawler import login, crawl, mesi
 
 
 
@@ -15,8 +15,8 @@ if not os.path.exists(results_folder):
     os.makedirs(results_folder)
 
 
-username = "142"
-password = "laura"
+username = "30105"
+password = "cespiti"
 
 start = 2019
 

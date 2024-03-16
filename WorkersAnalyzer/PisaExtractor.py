@@ -2,9 +2,8 @@ import os
 import re
 import pandas as pd
 
-from WorkersAnalyzer.Core import PDFIterator, turno
 from WorkersAnalyzer.ExctractingError import ExtractingError
-
+from WorkersAnalyzer.Extractors import PageExtractor
 w_days = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 datetime_format = '%Y-%m-%d  %H:%M'  # Example format: 'days hours:minutes'
@@ -17,7 +16,6 @@ class PisaExtractor:
     SingoliOrari = re.compile(r"\b\d\d:\d\d\b")
     PatternEntrateUscite = re.compile(r"(E|U)(\d\d:\d\d)")
     PatternData = re.compile(r'(Lun|Mar|Mer|Gio|Ven|Sab|Dom)\s(\d\d)')
-
 
     NamePattern = re.compile(r'[^a-zA-Z\s]')
 

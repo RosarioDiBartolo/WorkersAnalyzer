@@ -1,10 +1,6 @@
-import os.path
 from WorkersAnalyzer.DataExtracted import DataExtracted
-import pandas as pd
 
 from WorkersAnalyzer.Test import open_raw_test
-from WorkersAnalyzer.UserExtractor import UserExtractor
-from WorkersAnalyzer.Core import PDFIterator
 from WorkersAnalyzer.PisaExtractor import PisaExtractor
 
 
