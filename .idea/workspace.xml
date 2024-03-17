@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="Updating PisaExtractor and other functionalities">
-      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/DataFrameHandler.py" afterDir="false" />
+    <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/RawData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_FEBBRAIO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_FEBBRAIO.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_GENNAIO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_GENNAIO.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_MARZO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/BPC/results/2019_MARZO.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/BPC/scrape_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/BPC/scrape_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/DataExtracted.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Dummy-Extractors/CannizzaroExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Dummy-Extractors/OCRExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Dummy-Extractors/PoliclinicoExtractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Dummy-Extractors/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/ANDREOTTI VALERIA-2016-dicembre.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/DataFrameHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/DataFrameHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractorExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractorExample.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/SingleUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/SingleUser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/TestYear.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/TestYear.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/UserExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/UserExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Andreotti Valeria_AOUP_timbrature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Arrighi Michele_AOUP_timbrature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Barsotti Michela_AOUP_timbrature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Cerrai Elisa_AOUP_timbrature.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="2.0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,6 +85,7 @@
     &quot;Python.OCRExtractor.executor&quot;: &quot;Run&quot;,
     &quot;Python.PDFREADER.executor&quot;: &quot;Run&quot;,
     &quot;Python.Packagetest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PageData.executor&quot;: &quot;Run&quot;,
     &quot;Python.PageExtractor.executor&quot;: &quot;Run&quot;,
     &quot;Python.PageExtractorTest.executor&quot;: &quot;Run&quot;,
     &quot;Python.PisaExtractor (1).executor&quot;: &quot;Run&quot;,
@@ -115,7 +114,7 @@
     &quot;Python.year_extraction.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2.0&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;3.0&quot;,
     &quot;last.edited.regexp&quot;: &quot;U23&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Rosario/Desktop/WorkersAnalyzer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -133,14 +132,60 @@
       <recent name="C:\Users\Rosario\PycharmProjects\pythonProject\turni-pdf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer\Dummy-Extractors" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer" />
+      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\EasyTest" />
+      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer\Dummy-Extractors" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzers" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\PisaTests" />
-      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\BPC" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.PoliclinicoExtractor">
+  <component name="RunManager" selected="Python.UserExtractor (1)">
+    <configuration name="PageData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WorkersAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkersAnalyzer/Extractors" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkersAnalyzer/Extractors/PageData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PisaExtractor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="WorkersAnalyzer" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkersAnalyzer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PoliclinicoExtractor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WorkersAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -184,37 +229,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TestYear" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="WorkersAnalyzer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkersAnalyzer" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkersAnalyzer/TestYear.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="UserExtractor (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WorkersAnalyzer" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkersAnalyzer" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -230,36 +249,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scrape_user" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="WorkersAnalyzer" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WorkersAnalyzer/BPC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WorkersAnalyzer/BPC/scrape_user.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.UserExtractor (1)" />
         <item itemvalue="Python.PoliclinicoExtractor" />
+        <item itemvalue="Python.PageData" />
+        <item itemvalue="Python.PisaExtractor" />
         <item itemvalue="Python.PoliclinicoExtractor" />
-        <item itemvalue="Python.scrape_user" />
-        <item itemvalue="Python.SingleUser" />
-        <item itemvalue="Python.TestYear" />
       </list>
     </recent_temporary>
   </component>
@@ -353,6 +349,9 @@
       <workItem from="1710507690090" duration="3843000" />
       <workItem from="1710521210069" duration="391000" />
       <workItem from="1710596622562" duration="3606000" />
+      <workItem from="1710611351848" duration="3872000" />
+      <workItem from="1710663030131" duration="2338000" />
+      <workItem from="1710687973683" duration="1879000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />
@@ -586,7 +585,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710441207588</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710611451859</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1710611451859</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

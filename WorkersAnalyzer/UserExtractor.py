@@ -1,10 +1,9 @@
 import datetime
-import os
 
-import numpy as np
 import pandas as pd
 
 from WorkersAnalyzer.Core import PDFIterator, turno, Directory
+from WorkersAnalyzer.Extractors.DataExtracted import DataExtracted
 from WorkersAnalyzer.PisaExtractor import PisaExtractor
 
 
@@ -13,12 +12,11 @@ from WorkersAnalyzer.PisaExtractor import PisaExtractor
 class UserExtractor:
     def __init__(self, Extractors):
 
-        self.data, self.name  = UserExtractor.extract_from_extractors(Extractors)
+        self.data ,  self.name  = UserExtractor.extract_from_extractors(Extractors)
 
     def elaborate(extractor):
-        Elaboration = extractor.data["Data"].apply(
-            lambda Data: (Data.year, turno(Data.time())))
-        Elaboration = pd.DataFrame(list(Elaboration), columns=["Anno", "Turno"])
+
+        Elaboration = pd.DataFrame( {"Anno":   extractor.data.raw["Data"].apply(lambda date: date.year ).tolist()  , "Turno" : extractor.data.turni().tolist() } )
 
         return Elaboration.groupby("Anno" )
 
@@ -41,7 +39,7 @@ class UserExtractor:
             pass
             #raise Exception("Nomi diversi all'interno delle pagine...")
 
-        df = pd.concat( e.with_datetime() for e in Extractors ).dropna()
+        df = pd.concat( e.read().with_datetime().raw for e in Extractors ).dropna()
 
 
 
@@ -73,25 +71,15 @@ class UserExtractor:
         filtered = Entrate[ (  Uscite["Data"] - Entrate["Data"]  ) > datetime.timedelta(hours = 6) ]
 
 
-        return  filtered, list(names)[0]
+        return DataExtracted(  filtered ), list(names)[0]
 
 
 
 if __name__ == '__main__':
-     from Test import test_on_files
+     from WorkersAnalyzer.EasyTest.RawData import Pages
 
-     Out_dir = Directory("../Filtered/")
+     extractor = UserExtractor([PisaExtractor(p) for p in Pages ])
 
-     for file_pages, name in test_on_files():
-         try:
-
-            extractor = UserExtractor.from_block(file_pages)
-            Anni = extractor.elaborate()
-            Anni.apply(
-                lambda Anno: Anno["Turno"].value_counts().to_csv(Out_dir.path(name).to(f'{Anno.name}.csv'))
-            )
-         except Exception as e:
-             print(e)
 
 
         

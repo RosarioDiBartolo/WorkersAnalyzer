@@ -1,17 +1,14 @@
 import os
 import re
-import pandas as pd
 
-from WorkersAnalyzer.ExctractingError import ExtractingError
-from WorkersAnalyzer.Extractors import PageExtractor
+from WorkersAnalyzer.Extractors.PageExtractor import PageExtractor
 w_days = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 datetime_format = '%Y-%m-%d  %H:%M'  # Example format: 'days hours:minutes'
 
 
 
-class PisaExtractor:
-    columns = ["Tipo", "Giorno", "Ore", "Minuti", "Settimana"]
+class PisaExtractor(PageExtractor):
 
     SingoliOrari = re.compile(r"\b\d\d:\d\d\b")
     PatternEntrateUscite = re.compile(r"(E|U)(\d\d:\d\d)")
@@ -19,15 +16,6 @@ class PisaExtractor:
 
     NamePattern = re.compile(r'[^a-zA-Z\s]')
 
-    MONTHS_YEAR_PATTERN = re.compile(
-        r'(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)\s(\d\d\d\d)',
-        re.IGNORECASE)
-
-    def __init__(self, page):
-        self.data, self.name, self.mese, self.anno = PisaExtractor.extract_page(page)
-
-    def with_specifics(self):
-        return self.data.assign(Anno = self.anno, Mese = self.mese)
 
     def save(self, path):
         if os.path.exists(path):
@@ -37,13 +25,9 @@ class PisaExtractor:
             os.makedirs(path)
 
         self.data.to_csv( os.path.join(path, f"{self.name}-{self.anno}-{self.mese}.csv") )
-    def encode_date(extractor):
-        datetime_string =  str(extractor.anno) + "-" + str(extractor.mese) + "-" + extractor.data["Giorno"].astype(str) + " " + extractor.data["Ore"].astype(str) + ":" + extractor.data["Minuti"].astype(str)
-        return pd.to_datetime(datetime_string, format=datetime_format)
-    def with_datetime(self):
-        return self.data.assign(Data = self.encode_date()).drop(columns=["Giorno", "Ore", "Minuti"], axis=1)
+
     @staticmethod
-    def extract(row):
+    def extract_from_row(row):
 
         EntrateUscite = PisaExtractor.PatternEntrateUscite.findall(row)
         match = PisaExtractor.PatternData.search(row)
@@ -59,48 +43,24 @@ class PisaExtractor:
         return [(tipo, day, int(orario[0:2]), int(orario[3:]), wday) for (tipo, orario) in
                 EntrateUscite] if EntrateUscite else [(None, day, 0, 0, wday)]
 
-    @staticmethod
-    def name_from_page(rows):
-        return PisaExtractor.name_from_row(rows[0])
+    def content(self):
 
-    @staticmethod
-    def name_from_row(row):
-        return PisaExtractor.NamePattern.sub("", row).replace("Matricola", "").strip().upper()
+        for row in self.page[5:]:
+            if row.startswith("TOTALI"):
+                return  # Stop when the delimiter is encountered
+            if not row:
+                continue
+            yield row
+    def extract_name(self):
+        PisaExtractor.NamePattern.sub("", self.page[0]).replace("Matricola", "").strip().upper()
+    def extract(self):
+        interested = self.content()
 
-    @staticmethod
-    def data_form_raw(page):
-        result_strings = []
-
-        for s in page[5:]:
-            if s.startswith("TOTALI"):
-                break  # Stop when the delimiter is encountered
-
-            result_strings.append(s)
-
-        return result_strings
-
-    @staticmethod
-    def search_month_year(page):
-        for row in page:
-            match = PisaExtractor.MONTHS_YEAR_PATTERN.search(row)
-            if match:
-                return match.group().split()
+        return [timbratura for row in interested for timbratura in PisaExtractor.extract_from_row(row)  if row]
 
 
-        raise ExtractingError(page, "Mese")
-
-    @staticmethod
-    def extract_page(page):
-
-        name = PisaExtractor.name_from_page(page)
-        mese,anno = PisaExtractor.search_month_year(page)
+if __name__ == '__main__':
+    from WorkersAnalyzer.EasyTest.RawData import Page
 
 
-        interested = PisaExtractor.data_form_raw(page)
-
-        data = pd.DataFrame([timbratura for row in interested for timbratura in PisaExtractor.extract(row) if row ],
-                            columns=PisaExtractor.columns)
-
-        return data, name, mesi.index(mese.lower()) + 1, int(anno)
-
-
+    extractor = PisaExtractor( Page  )

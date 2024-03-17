@@ -1,11 +1,5 @@
-import datetime
-
-import pandas as pd
-
-from WorkersAnalyzer.Core import PDFIterator
 from WorkersAnalyzer.PisaExtractor import PisaExtractor
-from WorkersAnalyzer.UserExtractor import UserExtractor
-from Test import pages
+from WorkersAnalyzer.EasyTest.Test import pages
 pages = pages[0:1]
 
 #pages = PDFIterator(["./WorkersAnalyzers/PisaTests/Galli Chiara_AOUP_timbrature.pdf"])

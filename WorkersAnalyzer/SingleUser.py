@@ -1,6 +1,6 @@
 from WorkersAnalyzer.DataExtracted import DataExtracted
 
-from WorkersAnalyzer.Test import open_raw_test
+from WorkersAnalyzer.EasyTest.Test import open_raw_test
 from WorkersAnalyzer.PisaExtractor import PisaExtractor
 
 

@@ -1,6 +1,0 @@
-ANDREOTTI VALERIA
-turno
-Mattina       380
-Notte         366
-Pomeriggio    331
-waitress-serve
