@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/RawData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/__init__.py" afterDir="false" />
+    <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="Updating PisaExtractor and other functionalities">
+      <change afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/PoliclinicoUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/DataFrameHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/DataFrameHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/RawData.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/PisaUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/PoliclinicoExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/Extractors/PoliclinicoExtractor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractorExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/PisaExtractorExample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/SingleUser.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/SingleUser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/EasyTest/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/UserExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/WorkersAnalyzer/UserExtractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Andreotti Valeria_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Arrighi Michele_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Barsotti Michela_AOUP_timbrature.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WorkersAnalyzer/out/Cerrai Elisa_AOUP_timbrature.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,14 +125,14 @@
       <recent name="C:\Users\Rosario\PycharmProjects\pythonProject\turni-pdf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer\PoliclinicoTests" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\EasyTest" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzer\Dummy-Extractors" />
       <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\WorkersAnalyzers" />
-      <recent name="C:\Users\Rosario\Desktop\WorkersAnalyzer\PisaTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.UserExtractor (1)">
+  <component name="RunManager" selected="Python.PoliclinicoExtractor">
     <configuration name="PageData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="WorkersAnalyzer" />
       <option name="ENV_FILES" value="" />
@@ -251,8 +244,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.UserExtractor (1)" />
         <item itemvalue="Python.PoliclinicoExtractor" />
+        <item itemvalue="Python.UserExtractor (1)" />
         <item itemvalue="Python.PageData" />
         <item itemvalue="Python.PisaExtractor" />
         <item itemvalue="Python.PoliclinicoExtractor" />
@@ -351,7 +344,7 @@
       <workItem from="1710596622562" duration="3606000" />
       <workItem from="1710611351848" duration="3872000" />
       <workItem from="1710663030131" duration="2338000" />
-      <workItem from="1710687973683" duration="1879000" />
+      <workItem from="1710687973683" duration="4339000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />
@@ -593,7 +586,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710611451859</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710689870634</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1710689870634</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710689983753</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1710689983753</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710691253819</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1710691253819</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

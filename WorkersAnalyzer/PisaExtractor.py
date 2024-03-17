@@ -61,7 +61,7 @@ class PisaExtractor(PageExtractor):
 
 
 if __name__ == '__main__':
-    from WorkersAnalyzer.EasyTest.RawData import Page
+    from WorkersAnalyzer.EasyTest.PisaUtils import Page
 
 
     extractor = PisaExtractor( Page  )

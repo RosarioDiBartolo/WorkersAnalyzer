@@ -76,7 +76,7 @@ class UserExtractor:
 
 
 if __name__ == '__main__':
-     from WorkersAnalyzer.EasyTest.RawData import Pages
+     from WorkersAnalyzer.EasyTest.PisaUtils import Pages
 
      extractor = UserExtractor([PisaExtractor(p) for p in Pages ])
 

@@ -6,6 +6,7 @@ from WorkersAnalyzer.Extractors.PageExtractor import PageExtractor
 class PoliclinicoExtractor (PageExtractor):
     PatternData = re.compile(r'(lu|ma|me|gi|ve|sa|do)(\s|\*)(\d\d)')
     PatternTimbrature = re.compile(r"(E|U|u|e)(\d\d\d\d)")
+    PatternName = re.compile(r"BADGE:\d+(.*)")
 
     def extract(self ):
         InterestedPages = self.content( )
@@ -15,8 +16,7 @@ class PoliclinicoExtractor (PageExtractor):
 
 
     def extract_name(self):
-        pass
-
+        return PoliclinicoExtractor.PatternName.search(self.page[2]).group(1).strip()
     def content(self):
 
          for row in self.page[7:]:
@@ -44,8 +44,7 @@ class PoliclinicoExtractor (PageExtractor):
                Timbrature] if Timbrature else [(None, day, 0, 0, wday)]
 
 if __name__ == '__main__':
-    from WorkersAnalyzer.Core import PDFIterator
+    from WorkersAnalyzer.EasyTest.PoliclinicoUtils import SamplePages
 
-    Pages = list(PDFIterator("../../WorkersAnalyzer/mangione.pdf"))
+    e = PoliclinicoExtractor(SamplePages[0])
 
-    extractor = PoliclinicoExtractor(Pages[0])
