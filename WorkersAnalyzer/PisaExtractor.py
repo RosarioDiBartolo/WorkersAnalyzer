@@ -51,8 +51,9 @@ class PisaExtractor(PageExtractor):
             if not row:
                 continue
             yield row
+
     def extract_name(self):
-        PisaExtractor.NamePattern.sub("", self.page[0]).replace("Matricola", "").strip().upper()
+        return PisaExtractor.NamePattern.sub("", self.page[0]).replace("Matricola", "").strip().upper()
     def extract(self):
         interested = self.content()
 
