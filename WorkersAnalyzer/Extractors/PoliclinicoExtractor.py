@@ -1,13 +1,17 @@
 import re
 
-from WorkersAnalyzer.Extractors.PageExtractor import PageExtractor
+from WorkersAnalyzer.Extractors.PageExtractor import PageExtractor, w_days
 
 
 class PoliclinicoExtractor (PageExtractor):
     PatternData = re.compile(r'(lu|ma|me|gi|ve|sa|do)(\s|\*)(\d\d)')
     PatternTimbrature = re.compile(r"(E|U|u|e)(\d\d\d\d)")
     PatternName = re.compile(r"BADGE:\d+(.*)")
-
+    WeekTable = dict(zip(["lu", "ma", "me", "gi", "ve", "sa", "do"], w_days))
+    def read(self):
+        data = super(PoliclinicoExtractor, self).read()
+        data.raw["Settimana"] = data.raw["Settimana"].apply(lambda x :  PoliclinicoExtractor.WeekTable[x])
+        return data
     def extract(self ):
         InterestedPages = self.content( )
 

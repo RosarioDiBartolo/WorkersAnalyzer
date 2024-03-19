@@ -2,7 +2,6 @@ import os
 import re
 
 from WorkersAnalyzer.Extractors.PageExtractor import PageExtractor
-w_days = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
 datetime_format = '%Y-%m-%d  %H:%M'  # Example format: 'days hours:minutes'
 

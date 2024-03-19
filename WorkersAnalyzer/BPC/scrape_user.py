@@ -15,8 +15,8 @@ if not os.path.exists(results_folder):
     os.makedirs(results_folder)
 
 
-username = "30105"
-password = "cespiti"
+username = "142"
+password = "laura"
 
 start = 2019
 

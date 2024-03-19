@@ -3,10 +3,13 @@ import re
 from WorkersAnalyzer.ExctractingError import ExtractingError
 from WorkersAnalyzer.Extractors.PageData import PageData
 
-
+w_days = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom']
 class PageExtractor  :
     mesi = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre",
             "novembre", "dicembre"]
+
+
+
 
     MONTHS_YEAR_PATTERN = re.compile(
         r'(gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)\s(\d\d\d\d)',
