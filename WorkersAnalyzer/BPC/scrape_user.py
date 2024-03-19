@@ -34,5 +34,5 @@ for year in range(start, current_year + 1):
 
         result = crawl(session, year, month, username)
 
-        with open(f"{results_folder}/{year}_{month}.pdf", "wb") as f:
+        with open(f"{results_folder}/{year}-{month_idx}.pdf", "wb") as f:
             f.write(result.content)
