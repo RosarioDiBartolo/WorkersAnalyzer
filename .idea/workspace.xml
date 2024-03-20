@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="73d15d7c-5e67-4cc1-8693-b2e8b66593dc" name="Changes" comment="Updating PisaExtractor and other functionalities">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -324,7 +323,7 @@
       <workItem from="1710837366548" duration="4395000" />
       <workItem from="1710947312820" duration="3065000" />
       <workItem from="1710952440925" duration="9000" />
-      <workItem from="1710952902749" duration="1045000" />
+      <workItem from="1710952902749" duration="1056000" />
     </task>
     <task id="LOCAL-00001" summary="Adding initial files">
       <option name="closed" value="true" />
@@ -638,7 +637,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710953674136</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Updating PisaExtractor and other functionalities">
+      <option name="closed" value="true" />
+      <created>1710953960933</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1710953960933</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
