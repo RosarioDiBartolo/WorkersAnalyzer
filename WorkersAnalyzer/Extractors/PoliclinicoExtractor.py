@@ -33,7 +33,6 @@ class PoliclinicoExtractor (PageExtractor):
 
     @staticmethod
     def extract_row(row):
-        print(row)
         Timbrature = PoliclinicoExtractor.PatternTimbrature.findall(row)
 
         match = PoliclinicoExtractor.PatternData.search(row)

@@ -4,6 +4,7 @@ import pandas as pd
 
 from WorkersAnalyzer.Core import PDFIterator
 from WorkersAnalyzer.Extractors.DataExtracted import DataExtracted
+from WorkersAnalyzer.Extractors.PoliclinicoExtractor import PoliclinicoExtractor
 from WorkersAnalyzer.PisaExtractor import PisaExtractor
 
 
@@ -17,8 +18,8 @@ class UserExtractor:
     def elaborate(extractor):
 
         Elaboration =  extractor.data.raw.assign(Anno= extractor.data.raw["Data"].apply(lambda date: date.year ).tolist()  , Turno = extractor.data.turni().tolist()  )
-        DomenicheMattina= Elaboration[(Elaboration["Turno"] == "Mattina") & (Elaboration["Settimana"] == "Dom")]
-        return Elaboration.groupby("Anno" ), DomenicheMattina
+
+        return Elaboration.groupby("Anno" )
 
 
     @staticmethod
@@ -36,8 +37,7 @@ class UserExtractor:
 
         names = {e.name for e in Extractors}
         if len(names)> 1:
-            pass
-            #raise Exception("Nomi diversi all'interno delle pagine...")
+            raise Exception("Nomi diversi all'interno delle pagine...")
 
         df = pd.concat( e.read().with_datetime().raw for e in Extractors ).dropna()
 
@@ -46,6 +46,8 @@ class UserExtractor:
         df.drop(df[df["Tipo"] == "M"].index)
 
         df["Boolean-Type"] = df["Tipo"] == "E"
+
+
 
         df.sort_values(by='Data', ascending=True, inplace=True)
 
@@ -70,15 +72,14 @@ class UserExtractor:
 
         filtered = Entrate[ (  Uscite["Data"] - Entrate["Data"]  ) > datetime.timedelta(hours = 6) ]
 
-
         return DataExtracted(  filtered ), list(names)[0]
 
 
 
 if __name__ == '__main__':
-     from WorkersAnalyzer.EasyTest.PisaUtils import SamplePages
+     from WorkersAnalyzer.EasyTest.PoliclinicoUtils import SamplePages
 
-     extractor = UserExtractor([PisaExtractor(p) for p in SamplePages ])
+     extractor = UserExtractor([PoliclinicoExtractor(p) for p in SamplePages ])
 
 
 
